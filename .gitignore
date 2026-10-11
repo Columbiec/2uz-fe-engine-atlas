@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.vite/
+*.local
+playwright-report/
+test-results/
+*.tsbuildinfo
+.DS_Store
+public/glb/
+.playwright-cli/
+.vscode/
+output/
+
+# scripts/logs
+*.log

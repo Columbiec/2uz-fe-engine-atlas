@@ -1,0 +1,14 @@
+import type { Lesson } from '../../core/types';
+
+export const lessons: Lesson[] = [
+  { id: 'v8', title: 'Как работает V8', subtitle: '90° · восемь цилиндров', text: 'Два ряда по четыре цилиндра работают на общем коленчатом валу. В 2UZ‑FE вспышки следуют через каждые 90° поворота коленвала.', part: 'crankshaft', systems: ['engine', 'cranktrain', 'heads', 'ignition'], running: true },
+  { id: 'cycle', title: 'Четырёхтактный цикл', subtitle: '720° коленчатого вала', text: 'Впуск, сжатие, рабочий ход и выпуск занимают два оборота коленчатого вала. Выберите цилиндр, чтобы проследить цикл.', part: 'piston-1', systems: ['engine', 'cranktrain', 'heads', 'valvetrain', 'ignition'], running: true },
+  { id: 'crank', title: 'Коленчатый вал', subtitle: 'Вращение и балансировка', text: 'Шатуны передают усилие от поршней на четыре шатунные шейки. Пять коренных опор удерживают вал в блоке.', part: 'crankshaft', systems: ['engine', 'cranktrain', 'heads'], running: true, related: true },
+  { id: 'timing', title: 'Привод ГРМ', subtitle: 'Ремень и межвальные шестерни', text: 'Ремень синхронизирует коленвал и впускные распредвалы. Выпускные валы получают движение через шестерни.', part: 'timing-belt', systems: ['timing', 'valvetrain'], running: true, related: true },
+  { id: 'ignition', title: 'Зажигание', subtitle: 'Восемь катушек', text: 'Индивидуальная катушка создаёт высокое напряжение, а центральная свеча инициирует горение смеси.', part: 'plug-1', systems: ['ignition', 'engine', 'cranktrain', 'heads'], running: true },
+  { id: 'oil', title: 'Система смазки', subtitle: 'Условная трассировка', text: 'Масло забирается из поддона, проходит через насос и фильтр, поступает к опорам коленвала и в головки, затем возвращается самотёком.', part: 'oil-pump', systems: ['lubrication', 'engine', 'cranktrain', 'heads', 'valvetrain'], flow: 'oil' },
+  { id: 'cooling', title: 'Охлаждение', subtitle: 'Условное направление потока', text: 'Насос перемещает жидкость через рубашку блока и головки. Термостат управляет направлением потока к радиатору.', part: 'water-pump', systems: ['cooling', 'engine', 'cranktrain', 'heads'], flow: 'coolant' },
+  { id: 'air', title: 'Впуск и выпуск', subtitle: 'Газообмен двигателя', text: 'Воздух проходит дроссель, коллектор и каналы. После сгорания газы уходят через выпускные клапаны и коллекторы.', part: 'throttle-body', systems: ['intake', 'valvetrain', 'exhaust'], flow: 'air' },
+  { id: 'fuel', title: 'Подача топлива', subtitle: 'Распределённый впрыск', text: 'Две рампы питают восемь форсунок. Каждая форсунка дозирует топливо во впускной канал своего цилиндра.', part: 'injector-1', systems: ['fuel', 'intake'], flow: 'fuel' },
+  { id: 'sensors', title: 'Датчики', subtitle: 'Обратная связь для ЭБУ', text: 'Датчики коленвала, распредвала, температуры, детонации и дросселя помогают ЭБУ управлять впрыском и зажиганием.', part: 'crank-sensor', systems: ['sensors'], related: true },
+];
